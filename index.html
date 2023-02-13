@@ -1,0 +1,27 @@
+<script>
+  const OPENAI_API_KEY = "YOUR API KEY";
+  function chat(prompt) {
+    return fetch("https://api.openai.com/v1/completions", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${OPENAI_API_KEY}`,
+      },
+      body: JSON.stringify({
+        model: "text-davinci-003",
+        temperature: 0.3,
+        max_tokens: 800,
+        top_p: 1,
+        frequency_penalty: 0,
+        presence_penalty: 0,
+        prompt,
+      }),
+    }).then((res) => res.json());
+  }
+</script>
+<form onsubmit="chat(this.prompt.value).then(r=>this.result.innerText=r.choices[0].text);return false;">
+<textarea name="prompt" style="width:100%" rows="40">
+give me  a knowledge graph containing as many relationship as possible as a json format with every node has an id and label for the following prompt :  </textarea>
+<output name="result"></output>
+<button>go</button>
+</form>
