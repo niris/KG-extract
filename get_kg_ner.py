@@ -5,19 +5,19 @@ import os
 
 
 openai.api_key = os.getenv("OPENAI_API_KEY")
-prompt_text = """Given a text, extract a knowledge graph from the text by extrapolating as many relationships as possible from the text. It's important to extract every singles words frow text and store them all in the nodes list. Every node has an id, label, and its NER tag in BOI format. Every edge has a to and from with node ids, and a label. Edges are directed, so the order of the from and to is important.
+prompt_text = """Given a text, extract ner tags in BOI format. Then extract relations from the text using the ners tokens from the previous step. Every edge are directed and has a to and from tokens and a label.
 
 Examples:
 
-Text: Toto is tata's friend
+Text: Toto live in Paris 
 
-{ "nodes": [ { "id": 1, "label": "Toto", "ner_tag": "B-PERSON" },{ "id": 2, "label": "is", "ner_tag": "O" }, { "id": 3, "label": "Tata", "ner_tag": "B-PERSON" },{ "id": 4, "label": "friend", "ner_tag": "O" } ], "edges": [ { "from": 1, "to": 3, "label": "friend" } ] }
+{"tokens":[{"id":1,"text":"toto","label":"O-PERSON"},{"id":2, "text":"live","label":"O"},{"id":3, "text":"in","label":"O"},{"id":4, "text":"Paris","label":"B-LOCATION"}],"rel":[{"from": 1, "to": 4, "label": "live in"}]}
 
 Text : 
 """
 
 error_f = open(os.path.join("output","logs","error.txt"), "a")
-lesson = os.path.join("input","test.csv")
+lesson = os.path.join("input","combine_Test.csv")
 dir = os.path.join(os.path.splitext(lesson)[0])
 num = 0
 if not os.path.exists(dir):
@@ -30,10 +30,10 @@ with open(lesson, 'r') as csvfile:
         print(row[0], row[1])
         try:
             response = openai.Completion.create(
-                model="text-ada-001",
+                model="text-davinci-003",
                 prompt=prompt_text + row[1],
                 temperature=0,
-                max_tokens=1000,
+                max_tokens=1500,
                 top_p=1.0,
                 frequency_penalty=0.0,
                 presence_penalty=0.0
@@ -43,7 +43,8 @@ with open(lesson, 'r') as csvfile:
             error_f.write(f'{csvreader.line_num}\n')
             continue
 
-        print(response)
+        print("OK", row[0])
+        print(response["choices"][0]["text"])
         try:
             graph = json.loads(response["choices"][0]["text"].split("\n\n")[1])
         except Exception as e:

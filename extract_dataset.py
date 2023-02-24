@@ -6,5 +6,5 @@ with open("merged_file.json",'r') as f:
         labels = list(map(lambda x: x["label"], data[i]['graph']['nodes']))
         ner_tags = list(map(lambda x: x["ner_tag"], data[i]['graph']['nodes']))
         new_obj = {"tokens":labels,"ner_tags":ner_tags}
-        with open("ner_dataset.json", "a") as ner_file:
+        with open("ner_dataset.jsonl", "a") as ner_file:
             json.dump(new_obj, ner_file, indent=4)
