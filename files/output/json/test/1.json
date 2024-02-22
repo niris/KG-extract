@@ -1,0 +1,123 @@
+{
+    "1": {
+        "text": "John Lennon, a legendary musician and member of the Beatles, was born in Liverpool in 1940. He wrote iconic songs like 'Imagine' and 'Give Peace a Chance,' advocating for peace and love. Lennon's life was tragically ended when he was shot in New York City in 1980, leaving behind a lasting legacy in music and activism",
+        "graph": {
+            "nodes": {
+                "1": {
+                    "label": "John Lennon",
+                    "ner_tag": "B-PERSON"
+                },
+                "2": {
+                    "label": "musician",
+                    "ner_tag": "O"
+                },
+                "3": {
+                    "label": "Beatles",
+                    "ner_tag": "B-ORG"
+                },
+                "4": {
+                    "label": "Liverpool",
+                    "ner_tag": "B-GPE"
+                },
+                "5": {
+                    "label": "1940",
+                    "ner_tag": "O"
+                },
+                "6": {
+                    "label": "Imagine",
+                    "ner_tag": "O"
+                },
+                "7": {
+                    "label": "Give Peace a Chance",
+                    "ner_tag": "O"
+                },
+                "8": {
+                    "label": "peace",
+                    "ner_tag": "O"
+                },
+                "9": {
+                    "label": "love",
+                    "ner_tag": "O"
+                },
+                "10": {
+                    "label": "New York City",
+                    "ner_tag": "B-GPE"
+                },
+                "11": {
+                    "label": "1980",
+                    "ner_tag": "O"
+                },
+                "12": {
+                    "label": "music",
+                    "ner_tag": "O"
+                },
+                "13": {
+                    "label": "activism",
+                    "ner_tag": "O"
+                }
+            },
+            "edges": [
+                {
+                    "from": "1",
+                    "to": "2",
+                    "label": "member of"
+                },
+                {
+                    "from": "1",
+                    "to": "3",
+                    "label": "member of"
+                },
+                {
+                    "from": "1",
+                    "to": "4",
+                    "label": "born in"
+                },
+                {
+                    "from": "1",
+                    "to": "5",
+                    "label": "born in"
+                },
+                {
+                    "from": "1",
+                    "to": "6",
+                    "label": "wrote"
+                },
+                {
+                    "from": "1",
+                    "to": "7",
+                    "label": "wrote"
+                },
+                {
+                    "from": "1",
+                    "to": "8",
+                    "label": "advocating for"
+                },
+                {
+                    "from": "1",
+                    "to": "9",
+                    "label": "advocating for"
+                },
+                {
+                    "from": "1",
+                    "to": "10",
+                    "label": "shot in"
+                },
+                {
+                    "from": "1",
+                    "to": "11",
+                    "label": "shot in"
+                },
+                {
+                    "from": "1",
+                    "to": "12",
+                    "label": "legacy in"
+                },
+                {
+                    "from": "1",
+                    "to": "13",
+                    "label": "legacy in"
+                }
+            ]
+        }
+    }
+}
