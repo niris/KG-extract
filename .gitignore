@@ -1,4 +1,7 @@
-l# Byte-compiled / optimized / DLL files
+# Local storage folders
+files
+
+# Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
 *$py.class
