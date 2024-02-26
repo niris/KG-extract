@@ -1,168 +1,168 @@
 {
-    "2": {
-        "text": "The Eiffel Tower, located in Paris, France, is an iconic symbol of the city. Built by Gustave Eiffel for the 1889 World's Fair, it stands as a marvel of engineering and architecture. The tower attracts millions of visitors annually, offering breathtaking views of Paris from its observation decks. Standing at 324 meters tall, the Eiffel Tower was the tallest man-made structure in the world until 1930. Today, it remains one of the most visited landmarks globally.",
-        "graph": {
-            "nodes": {
-                "1": {
-                    "label": "Eiffel Tower",
-                    "ner_tag": "B-LOC"
-                },
-                "2": {
-                    "label": "Paris",
-                    "ner_tag": "B-LOC"
-                },
-                "3": {
-                    "label": "France",
-                    "ner_tag": "B-LOC"
-                },
-                "4": {
-                    "label": "Gustave Eiffel",
-                    "ner_tag": "B-PERSON"
-                },
-                "5": {
-                    "label": "1889 World's Fair",
-                    "ner_tag": "O"
-                },
-                "6": {
-                    "label": "iconic symbol",
-                    "ner_tag": "O"
-                },
-                "7": {
-                    "label": "city",
-                    "ner_tag": "O"
-                },
-                "8": {
-                    "label": "marvel",
-                    "ner_tag": "O"
-                },
-                "9": {
-                    "label": "engineering",
-                    "ner_tag": "O"
-                },
-                "10": {
-                    "label": "architecture",
-                    "ner_tag": "O"
-                },
-                "11": {
-                    "label": "millions of visitors",
-                    "ner_tag": "O"
-                },
-                "12": {
-                    "label": "observation decks",
-                    "ner_tag": "O"
-                },
-                "13": {
-                    "label": "324 meters tall",
-                    "ner_tag": "O"
-                },
-                "14": {
-                    "label": "tallest man-made structure",
-                    "ner_tag": "O"
-                },
-                "15": {
-                    "label": "world",
-                    "ner_tag": "O"
-                },
-                "16": {
-                    "label": "1930",
-                    "ner_tag": "O"
-                },
-                "17": {
-                    "label": "most visited landmarks",
-                    "ner_tag": "O"
-                },
-                "18": {
-                    "label": "globally",
-                    "ner_tag": "O"
-                }
-            },
-            "edges": [
-                {
-                    "from": "1",
-                    "to": "2",
-                    "label": "located in"
-                },
-                {
-                    "from": "1",
-                    "to": "3",
-                    "label": "located in"
-                },
-                {
-                    "from": "1",
-                    "to": "4",
-                    "label": "Built by"
-                },
-                {
-                    "from": "4",
-                    "to": "5",
-                    "label": "for"
-                },
-                {
-                    "from": "1",
-                    "to": "6",
-                    "label": "is"
-                },
-                {
-                    "from": "1",
-                    "to": "7",
-                    "label": "is"
-                },
-                {
-                    "from": "1",
-                    "to": "8",
-                    "label": "stands as"
-                },
-                {
-                    "from": "1",
-                    "to": "9",
-                    "label": "stands as"
-                },
-                {
-                    "from": "1",
-                    "to": "10",
-                    "label": "stands as"
-                },
-                {
-                    "from": "1",
-                    "to": "11",
-                    "label": "attracts"
-                },
-                {
-                    "from": "1",
-                    "to": "12",
-                    "label": "offering"
-                },
-                {
-                    "from": "1",
-                    "to": "13",
-                    "label": "Standing at"
-                },
-                {
-                    "from": "1",
-                    "to": "14",
-                    "label": "was"
-                },
-                {
-                    "from": "14",
-                    "to": "15",
-                    "label": "in"
-                },
-                {
-                    "from": "1",
-                    "to": "16",
-                    "label": "was"
-                },
-                {
-                    "from": "1",
-                    "to": "17",
-                    "label": "remains"
-                },
-                {
-                    "from": "17",
-                    "to": "18",
-                    "label": "one of"
-                }
-            ]
+  "2": {
+    "text": "The Eiffel Tower, located in Paris, France, is an iconic symbol of the city. Built by Gustave Eiffel for the 1889 World's Fair, it stands as a marvel of engineering and architecture. The tower attracts millions of visitors annually, offering breathtaking views of Paris from its observation decks. Standing at 324 meters tall, the Eiffel Tower was the tallest man-made structure in the world until 1930. Today, it remains one of the most visited landmarks globally.",
+    "graph": {
+      "nodes": {
+        "1": {
+          "label": "Eiffel Tower",
+          "ner_tag": "B-LOC"
+        },
+        "2": {
+          "label": "Paris",
+          "ner_tag": "B-LOC"
+        },
+        "3": {
+          "label": "France",
+          "ner_tag": "B-LOC"
+        },
+        "4": {
+          "label": "Gustave Eiffel",
+          "ner_tag": "B-PERSON"
+        },
+        "5": {
+          "label": "1889 World's Fair",
+          "ner_tag": "O"
+        },
+        "6": {
+          "label": "iconic symbol",
+          "ner_tag": "O"
+        },
+        "7": {
+          "label": "city",
+          "ner_tag": "O"
+        },
+        "8": {
+          "label": "marvel",
+          "ner_tag": "O"
+        },
+        "9": {
+          "label": "engineering",
+          "ner_tag": "O"
+        },
+        "10": {
+          "label": "architecture",
+          "ner_tag": "O"
+        },
+        "11": {
+          "label": "millions of visitors",
+          "ner_tag": "O"
+        },
+        "12": {
+          "label": "observation decks",
+          "ner_tag": "O"
+        },
+        "13": {
+          "label": "324 meters tall",
+          "ner_tag": "O"
+        },
+        "14": {
+          "label": "tallest man-made structure",
+          "ner_tag": "O"
+        },
+        "15": {
+          "label": "world",
+          "ner_tag": "O"
+        },
+        "16": {
+          "label": "1930",
+          "ner_tag": "O"
+        },
+        "17": {
+          "label": "most visited landmarks",
+          "ner_tag": "O"
+        },
+        "18": {
+          "label": "globally",
+          "ner_tag": "O"
         }
+      },
+      "edges": [
+        {
+          "from": "1",
+          "to": "2",
+          "label": "located in"
+        },
+        {
+          "from": "1",
+          "to": "3",
+          "label": "located in"
+        },
+        {
+          "from": "1",
+          "to": "4",
+          "label": "Built by"
+        },
+        {
+          "from": "4",
+          "to": "5",
+          "label": "for"
+        },
+        {
+          "from": "1",
+          "to": "6",
+          "label": "is"
+        },
+        {
+          "from": "1",
+          "to": "7",
+          "label": "is"
+        },
+        {
+          "from": "1",
+          "to": "8",
+          "label": "stands as"
+        },
+        {
+          "from": "1",
+          "to": "9",
+          "label": "stands as"
+        },
+        {
+          "from": "1",
+          "to": "10",
+          "label": "stands as"
+        },
+        {
+          "from": "1",
+          "to": "11",
+          "label": "attracts"
+        },
+        {
+          "from": "1",
+          "to": "12",
+          "label": "offering"
+        },
+        {
+          "from": "1",
+          "to": "13",
+          "label": "Standing at"
+        },
+        {
+          "from": "1",
+          "to": "14",
+          "label": "was"
+        },
+        {
+          "from": "14",
+          "to": "15",
+          "label": "in"
+        },
+        {
+          "from": "1",
+          "to": "16",
+          "label": "was"
+        },
+        {
+          "from": "1",
+          "to": "17",
+          "label": "remains"
+        },
+        {
+          "from": "17",
+          "to": "18",
+          "label": "one of"
+        }
+      ]
     }
+  }
 }

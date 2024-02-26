@@ -1,5 +1,6 @@
 # Local storage folders
-files
+files/input
+files/output
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

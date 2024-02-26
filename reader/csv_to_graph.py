@@ -2,16 +2,16 @@ import os
 import csv
 import json
 
-from generator.openai_generator import OpenAIGenerator
+from extractor.openai_generator import OpenAIGenerator
 
 
-def extract_csv_to_graphs(file_path, save_to_json=False):
+def extract_csv_to_graph_elements(file_path, save_to_json=False):
     """
-    Extracts a list of graphs in JSON format from a CSV file.
+    Extracts a list of nodes and edges between them from a CSV file.
     If save_to_json is True, it saves each graph as a JSON file in the output directory.
     """
 
-    graphs = []
+    graphs_elements = []
     file_name = os.path.splitext(os.path.basename(file_path))[0]
     openai_client = OpenAIGenerator()
 
@@ -22,7 +22,7 @@ def extract_csv_to_graphs(file_path, save_to_json=False):
             graph = openai_client.get_knowledge_graph(row[1])
 
             if graph:
-                graphs.append(graph)
+                graphs_elements.append(graph)
                 # Save graph to a JSON file
                 if save_to_json:
                     output_path = os.path.join("files", "output", "json", file_name)
@@ -34,4 +34,4 @@ def extract_csv_to_graphs(file_path, save_to_json=False):
                         os.path.join(output_path, str(line_num) + ".json"), "w"
                     ) as json_file:
                         json.dump(graph_info, json_file, indent=4)
-    return graphs
+    return graphs_elements

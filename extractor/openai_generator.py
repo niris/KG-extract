@@ -9,7 +9,8 @@ class OpenAIGenerator:
         self.client = OpenAI()
 
     def get_knowledge_graph(self, input_text):
-        preprompt = """Given the provided input text below, your task is to construct a knowledge graph by discerning relationships within the text. The objective is to extract significant entities representing nodes in the graph. Each node should possess an ID, a label (the word itself), and its Named Entity Recognition (NER) tag. Furthermore, establish directed edges between nodes to signify relationships, with each edge containing the IDs of the nodes it connects and a label describing the relationship. Ensure that the relationship label is significant, such as action or preposition. The final output should be a JSON representation of the graph.
+        preprompt = """Given the provided input text below, your task is to construct a knowledge graph by discerning relationships within the text. The objective is to extract significant entities representing nodes in the graph. Each node should possess an ID, a label (the word itself), and its Named Entity Recognition (NER) tag. Furthermore, establish directed edges between nodes to signify relationships, with each edge containing the IDs of the nodes it connects and a label describing the relationship. Ensure that the relationship label is significant, such as action or preposition. The final output should be a JSON representation of the graph. Do not include any extraneous information.
+        Example:
         Input text: "Toto is Tata's friend"
         Response:
         {
@@ -50,7 +51,7 @@ class OpenAIGenerator:
         try:
             extract_json = json.loads(response.choices[0].message.content)
         except Exception as e:
-            print(response.choices[0].message.content)
+            print("Not valid text", response.choices[0].message.content)
             logging.error(
                 e,
                 f"Response from document is not jsonifiable",
